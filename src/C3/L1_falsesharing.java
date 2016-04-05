@@ -6,5 +6,5 @@ package C3;
 public class L1_falsesharing {
     public static int NUM_MAX = 3;
     public final static long ITER = 5000L;
-    private
+    //private
 }
