@@ -5,7 +5,7 @@ package C4;
  */
 public class Singleton {
      static Object key = new Object();
-    private static Singleton instance;
+    private static volatile Singleton instance;
     private  Singleton(){};
     public  static Singleton  getInstance(){
         if (instance != null) {
