@@ -5,6 +5,7 @@ package C1;
  */
 public class L2_racecondition {
     private long a;
+    private Object key = new Object();
     public L2_racecondition(long a){
         this.a = a;
     }
@@ -14,6 +15,8 @@ public class L2_racecondition {
     }
 
     public void increValue(){
-        a+=1;
+        synchronized (key) {
+            a += 1;
+        }
     }
 }

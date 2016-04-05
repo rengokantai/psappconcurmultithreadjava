@@ -8,7 +8,7 @@ public class L2_raceconditionmain {
     public static void main(String[] args) throws InterruptedException {
         L2_racecondition l2 = new L2_racecondition(0L);
         Runnable r = ()->{
-            for(int i=0;i<1000;i++){
+            for(int i=0;i<100;i++){
                 l2.increValue();
             }
         };
