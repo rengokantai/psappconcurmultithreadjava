@@ -12,9 +12,14 @@ public class L2_raceconditionmain {
                 l2.increValue();
             }
         };
-        Thread t = new Thread(r);
-        t.start();
-        t.join();
+        Thread[] threads = new Thread[100];
+        for (int i =0;i<threads.length;i++) {
+            threads[i] = new Thread(r);
+            threads[i].start();
+        }
+        for (int i =0;i<threads.length;i++) {
+            threads[i].join();
+        }
         System.out.println(l2.getValue());
     }
 }
